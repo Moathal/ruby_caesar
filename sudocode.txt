@@ -1,0 +1,19 @@
+Ciphering given str (string) by replacing letters with others that are given moves away from it.
+
+**Special Case// if moves will take ciphered text beyond the Z/z.
+  code should wrap to start from a/A again.
+  
+    1 - Define a method with two input arguments str "string" and moves"number of moves"
+    2 - define ciphered_text variable.                          **make sure it is of type string**
+    3 - Iterate over each character ASCI code and on each character do the following:-
+            A) Check if its an alphabetical (between (65,90) or (97,122)) character, if yes:
+                1- A)- 1) find if it is small or capital and store if small 'a' code
+                          in temp (temporary variable). otherwise store 'A' code in temp.
+                1- A)- 2) add to ciphered text (temp + ((character code + moves - temp) % 26)) 
+                          after converting it back to a character 
+                          if (char_code + moves - temp) % 26 not equal 0, 
+                          otherwise add the character convert (char_code + moves) to it.
+            B) if no, add to ciphered text variable the character code after converting 
+               it back to a character.
+    4 - return ciphered text.
+      
